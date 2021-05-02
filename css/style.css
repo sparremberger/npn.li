@@ -127,6 +127,7 @@ main button:hover {
     top: -80px;
     z-index: -1;
     background-color: rgb(236, 236, 236);
+    border:solid 1px red;
 }
 
 #features-text-div {
@@ -156,10 +157,10 @@ main button:hover {
     justify-content: center;
     width: 100%;
     margin-top: 380px;
+    border:solid red 1px;
 }
 
 .card {
-
     width: 240px;
     height: 200px;
     border: solid black dotted;
@@ -167,13 +168,13 @@ main button:hover {
     margin: 20px;
     z-index: 2;
     padding: 20px;
-    border-radius:10px;
+    border-radius: 10px;
+    border:solid red 1px;
 }
 
 h4 {
     margin: auto;
     padding: 0;
-
 }
 
 .two {
@@ -185,27 +186,53 @@ h4 {
 }
 
 .card p {
-
     margin: auto;
     padding: 0;
 }
 
 .corner-pic {
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
-    position:relative;
-    top:-60px;
+    position: relative;
+    top: -60px;
 
-    background-color:rgb(28, 23, 56);
-    border-radius:50px;
-    width:80px ;
-    height:80px;
-    margin-bottom:0px;
-
+    background-color: rgb(28, 23, 56);
+    border-radius: 50px;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 0px;
 }
 
 .corner-pic img {
-    width:60%;
+    width: 60%;
     height: 60%;
+}
+
+#boost-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    border:1px solid blue;
+}
+
+#boost-section h2 {
+
+
+
+}
+
+#boost-section button {
+
+    border: none;
+    width: 150px;
+    height: 3em;
+    font-weight: 400;
+    font-family: Poppins;
+    font-size: 1em;
+    border-radius: 50px;
+    background-color: green;
+    color: white;
 }
