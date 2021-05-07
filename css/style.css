@@ -11,7 +11,8 @@ nav {
     justify-content: flex-start;
 }
 
-#logo {
+#logo,
+#footer_logo {
     width: 100px;
     padding-top: 10px;
     padding-left: 10px;
@@ -81,7 +82,7 @@ main button:hover {
     border-radius: 20px;
     width: 80vw;
     height: 160px;
-    background-image: url(/images/bg-shorten-desktop.svg);
+    background-image: url("/images/bg-shorten-desktop.svg");
     background-color: rgb(28, 23, 56);
 }
 
@@ -127,7 +128,6 @@ main button:hover {
     top: -80px;
     z-index: -1;
     background-color: rgb(236, 236, 236);
-    border:solid 1px red;
 }
 
 #features-text-div {
@@ -157,7 +157,6 @@ main button:hover {
     justify-content: center;
     width: 100%;
     margin-top: 380px;
-    border:solid red 1px;
 }
 
 .card {
@@ -169,7 +168,6 @@ main button:hover {
     z-index: 2;
     padding: 20px;
     border-radius: 10px;
-    border:solid red 1px;
 }
 
 h4 {
@@ -214,18 +212,17 @@ h4 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 150px;
-    border:1px solid blue;
+    height: 200px;
+
+    background-color: rgb(28, 23, 56);
+    background-image: url("/images/bg-boost-desktop.svg");
 }
 
 #boost-section h2 {
-
-
-
+    color: white;
 }
 
 #boost-section button {
-
     border: none;
     width: 150px;
     height: 3em;
@@ -236,3 +233,59 @@ h4 {
     background-color: green;
     color: white;
 }
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 220px;
+    background-color: rgb(17, 12, 17);
+    padding-top: 10px;
+    padding-left: 10px;
+    color: white;
+}
+
+footer #footer_resources {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+footer #footer_logo {
+    margin-left: 4%;
+
+
+}
+
+footer ul {
+
+
+    font-weight: 200;
+    list-style-type: none;
+}
+
+footer ul li:first-child {
+    font-weight:700;
+}
+
+#footer_social {
+    margin-right: 4%;
+}
+
+i {
+    font-size: 1.8em;
+}
+
+.fab {
+    color: white;
+}
+
+i:hover {
+    cursor: pointer;
+    color: #92374d;
+    transition: all 0.2s ease-out;
+}
+
+
