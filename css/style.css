@@ -40,10 +40,13 @@ nav ul:last-child {
 /* Main, parte que contém o hero e a barra de urls */
 main {
     display: flex;
+
+  margin-left:7%;
+  margin-right:7%;
 }
 
 #hero-svg {
-    width: 800px;
+    width: 700px;
 }
 
 main h1 {
@@ -56,6 +59,7 @@ main p {
 }
 
 main button {
+    margin-top:5%;
     margin-left: 10%;
     border: none;
     width: 150px;
@@ -135,6 +139,7 @@ main button:hover {
     top: 20%;
     width: 50%;
     text-align: center;
+ 
 }
 
 /* Melhor arrumar isso. Ao invés de dois p com uma margin setada entre eles, use as propriedades de tipografia. */
@@ -162,17 +167,22 @@ main button:hover {
 .card {
     width: 240px;
     height: 200px;
-    border: solid black dotted;
+
     background-color: white;
     margin: 20px;
     z-index: 2;
     padding: 20px;
     border-radius: 10px;
+    padding-top:0px;
+    margin-top:0px;
+    
 }
 
 h4 {
     margin: auto;
     padding: 0;
+
+    
 }
 
 .two {
@@ -185,7 +195,7 @@ h4 {
 
 .card p {
     margin: auto;
-    padding: 0;
+
 }
 
 .corner-pic {
