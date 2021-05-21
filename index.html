@@ -16,6 +16,9 @@
             rel="stylesheet"
         />
         <meta id="https://undraw.co/search" />
+        
+        
+        
         <title>NPN Links</title>
     </head>
     <body>
@@ -52,8 +55,15 @@
         </main>
         <section id="input-section">
             <div>
-                <input type="text" id="" placeholder="Encurte um link aqui" />
-                <button>Encurtar</button>
+                <label for="url"></label>
+                <input
+                    type="text"
+                    id="url"
+                    placeholder="Encurte um link aqui"
+                    name="url"
+
+                />
+                <button onclick="encurtar()">Encurtar</button>
             </div>
         </section>
         <section id="features-section">
@@ -69,7 +79,8 @@
                     </div>
                     <h4>Dados estatísticos</h4>
                     <p>
-                        Total de cliques, informações demográficas e uma interface simples e intuitiva
+                        Total de cliques, informações demográficas e uma
+                        interface simples e intuitiva
                     </p>
                 </div>
                 <div class="card two">
@@ -78,7 +89,8 @@
                     </div>
                     <h4>Alto desempenho</h4>
                     <p>
-                        Menos de 1 segundo será adicionado ao tempo de carregamento.
+                        Menos de 1 segundo será adicionado ao tempo de
+                        carregamento.
                     </p>
                 </div>
                 <div class="card three">
@@ -90,7 +102,8 @@
                     </div>
                     <h4>Personalização</h4>
                     <p>
-                        Dê uma cara mais pessoal aos seus links utilizando nossas ferramentas.
+                        Dê uma cara mais pessoal aos seus links utilizando
+                        nossas ferramentas.
                     </p>
                 </div>
                 <div id="box"></div>
@@ -141,5 +154,7 @@
                 <a href="#"><i class="fab fa-twitter"></i></a>
             </div>
         </footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+        <script src="./js/index.js"></script>
     </body>
 </html>
