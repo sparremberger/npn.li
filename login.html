@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./css/cadastro.css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap"
+            rel="stylesheet"
+        />
+        <title>NPN Links - Login</title>
+    </head>
+    <body>
+        <nav>
+            <img src="./images/logo.svg" id="logo" alt="npn.li logo" />
+        </nav>
+        <form action="/login" method="POST">
+            <label for="email">E-mail</label><br />
+            <input type="email" id="email" name="email" /><br />
+
+            <label for="password">Senha:</label><br />
+            <input type="password" id="password" name="password" /><br />
+
+            <input type="submit" value="Entrar" />
+            <input type="button" value="Retornar" />
+        </form>
+    </body>
+</html>
