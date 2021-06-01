@@ -1,6 +1,5 @@
 function encurtar() {
     const url = document.querySelector("#url");
-    console.log(url.value);
     axios
         .post("/encurtar", {
             url: `${url.value}`,
