@@ -7,24 +7,23 @@
         <link rel="stylesheet" href="./css/style.css" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700&display=swap"
-            rel="stylesheet"
-        />
-        <link
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
-            rel="stylesheet"
-        />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700&display=swap" rel="stylesheet" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" rel="stylesheet" />
         <meta id="https://undraw.co/search" />
-        
-        
-        
+
         <title>NPN Links</title>
     </head>
     <body>
         <header>
             <nav>
                 <img src="./images/logo.svg" id="logo" alt="npn.li logo" />
+                <div class="container" onclick="showLinks(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </nav>
+            <div id="header-links">
                 <ul>
                     <a href="#">Sobre</a>
                     <a href="#">Funcionalidades</a>
@@ -34,35 +33,23 @@
                     <a href="/login">Login </a>
                     <a href="/registro">Registrar-se</a>
                 </ul>
-            </nav>
+            </div>
         </header>
         <main>
             <div>
-                <h1>Mais do que um encurtador de links.</h1>
-                <p>
-                    Tenha um histórico de links criados e obtenha estatísticas
-                    úteis sobre eles.
-                </p>
+                <h1>Mais do que um encurtador de links</h1>
+                <p>Tenha um histórico de links criados e obtenha estatísticas úteis sobre eles.</p>
                 <button>Vamos lá</button>
             </div>
-            <div>
-                <img
-                    src="./images/hero.svg"
-                    id="hero-svg"
-                    alt="Ilustração principal"
-                />
+            <div id="hero">
+                <!-- src="./images/hero.svg" -->
+                <img src="./images/hero.svg" id="hero-svg" alt="Ilustração principal" />
             </div>
         </main>
         <section id="input-section">
             <div>
                 <label for="url"></label>
-                <input
-                    type="text"
-                    id="url"
-                    placeholder="Encurte um link aqui"
-                    name="url"
-
-                />
+                <input type="text" id="url" placeholder="Encurte um link aqui..." name="url" />
                 <button onclick="encurtar()">Encurtar</button>
             </div>
         </section>
@@ -78,47 +65,31 @@
                         <img src="./images/icon-brand-recognition.svg" alt="" />
                     </div>
                     <h4>Dados estatísticos</h4>
-                    <p>
-                        Total de cliques, informações demográficas e uma
-                        interface simples e intuitiva
-                    </p>
+                    <p>Total de cliques, informações demográficas e uma interface simples e intuitiva</p>
                 </div>
                 <div class="card two">
                     <div class="corner-pic">
                         <img src="./images/icon-detailed-records.svg" alt="" />
                     </div>
                     <h4>Alto desempenho</h4>
-                    <p>
-                        Menos de 1 segundo será adicionado ao tempo de
-                        carregamento.
-                    </p>
+                    <p>Menos de 1 segundo será adicionado ao tempo de carregamento.</p>
                 </div>
                 <div class="card three">
                     <div class="corner-pic">
-                        <img
-                            src="./images/icon-fully-customizable.svg"
-                            alt=""
-                        />
+                        <img src="./images/icon-fully-customizable.svg" alt="" />
                     </div>
                     <h4>Personalização</h4>
-                    <p>
-                        Dê uma cara mais pessoal aos seus links utilizando
-                        nossas ferramentas.
-                    </p>
+                    <p>Dê uma cara mais pessoal aos seus links utilizando nossas ferramentas.</p>
                 </div>
                 <div id="box"></div>
             </div>
         </section>
         <section id="boost-section">
-            <h2>Turbine seus links hoje mesmo</h2>
+            <h2>Turbine seus links<br> hoje mesmo</h2>
             <button>É pra já!</button>
         </section>
         <footer>
-            <img
-                src="./images/footer_logo.svg"
-                id="footer_logo"
-                alt="npn.li logo"
-            />
+            <img src="./images/footer_logo.svg" id="footer_logo" alt="npn.li logo" />
             <div id="footer_resources">
                 <ul>
                     <li>NPN Links</li>
@@ -140,17 +111,9 @@
                 </ul>
             </div>
             <div id="footer_social">
-                <a
-                    href="https://www.linkedin.com/in/alan-sparremberger-72a145115/"
-                    target="_blank"
-                    ><i class="fab fa-linkedin"></i
-                ></a>
-                <a href="https://github.com/sparremberger" target="_blank"
-                    ><i class="fab fa-github"></i
-                ></a>
-                <a href="https://instagram.com/sparremberger_" target="_blank"
-                    ><i class="fab fa-instagram"></i
-                ></a>
+                <a href="https://www.linkedin.com/in/alan-sparremberger-72a145115/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/sparremberger" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://instagram.com/sparremberger_" target="_blank"><i class="fab fa-instagram"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
             </div>
         </footer>

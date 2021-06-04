@@ -1,301 +1,144 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Poppins;
-}
-
-/* Navbar no topo */
-nav {
-    margin-left: 4%; /* Revisar */
-    display: flex;
-    justify-content: flex-start;
-}
-
-#logo,
-#footer_logo {
-    width: 100px;
-    padding-top: 10px;
-    padding-left: 10px;
-}
-
-nav a {
-    margin: 20px;
-    color: darkgray;
-    text-decoration: none;
-}
-
-nav a:hover {
-    color: black;
-}
-
-ul {
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-nav ul:last-child {
-    margin-left: auto;
-}
-
-/* Main, parte que contém o hero e a barra de urls */
-main {
-    display: flex;
-
-  margin-left:7%;
-  margin-right:7%;
-}
-
-#hero-svg {
-    width: 700px;
-}
-
-main h1 {
-    margin-top: 20%;
-    margin-left: 10%;
-}
-
-main p {
-    margin-left: 10%;
-}
-
-main button {
-    margin-top:5%;
-    margin-left: 10%;
-    border: none;
-    width: 150px;
-    height: 3em;
-    font-weight: 400;
-    font-family: Poppins;
-    font-size: 1em;
-    border-radius: 50px;
-    background-color: green;
-    color: white;
-}
-
-main button:hover {
-    background-color: rgb(0, 199, 0);
-}
-
-/* Essa parte toda é só a input section */
-#input-section div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    margin-top: 50px;
-    border-radius: 20px;
-    width: 80vw;
-    height: 160px;
-    background-image: url("/images/bg-shorten-desktop.svg");
-    background-color: rgb(28, 23, 56);
-}
-
-#input-section div input {
-    width: 70%;
-    height: 30%;
-    border: none;
-    border-radius: 5px;
-
-    font-family: Poppins;
-    font-size: 1.3em;
-    font-weight: 400;
-    padding-left: 1em;
-    padding-right: 1em;
-
-    /*transition: ease-in-out, width .35s ease-in-out;*/
-}
-
-#input-section div button {
-    border: none;
-    width: 150px;
-    height: 30%;
-    font-weight: 400;
-    font-family: Poppins;
-    font-size: 1em;
-    border-radius: 10px;
-    background-color: green;
-    color: white;
-    margin-left: 10px;
-}
-
-#input-section div button:hover {
-    background-color: rgb(0, 199, 0);
-}
-
-/* Após a input vem as features */
-#features-section {
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    height: 720px;
-    position: relative;
-    top: -80px;
-    z-index: -1;
-    background-color: rgb(236, 236, 236);
-}
-
-#features-text-div {
-    position: absolute;
-    top: 20%;
-    width: 50%;
-    text-align: center;
- 
-}
-
-/* Melhor arrumar isso. Ao invés de dois p com uma margin setada entre eles, use as propriedades de tipografia. */
-#features-section p {
-    margin: 0.3em;
-    color: grey;
-}
-
-#box {
-    position: absolute;
-
-    background-color: green;
-    height: 4px;
-    width: 50%;
-    top: 500px;
-}
-
-#cards-div {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: 380px;
-}
-
-.card {
-    width: 240px;
-    height: 200px;
-
     background-color: white;
-    margin: 20px;
-    z-index: 2;
-    padding: 20px;
-    border-radius: 10px;
-    padding-top:0px;
-    margin-top:0px;
-    
 }
 
-h4 {
-    margin: auto;
-    padding: 0;
+@media (max-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        margin: 0px;
+        padding: 0px;
+        background-color: white;
+        width: 100vw;
+        overflow-x: hidden;
+        /*overflow-y: hidden; /* REMOVER, SÓ PRA DEBUG */
+        font-family: Poppins;
+    }
 
-    
+    /* BARRA DE NAVEGAÇÃO */
+    nav {
+        background-color: white;
+
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    #header-links {
+        background-color: white;
+        display: block;
+    }
+
+    #logo,
+    #footer_logo {
+        /* Revisar */
+        width: 25vw;
+        margin-left: 0.5em;
+        margin-top: 0.5em;
+        padding: 0;
+    }
+
+    /* HAMBURGER */
+    .container {
+        display: inline-block;
+        position: absolute;
+        top: 0.5em;
+        right: 0.5em;
+        cursor: pointer;
+    }
+
+    .bar1,
+    .bar2,
+    .bar3 {
+        width: 1.4em;
+        height: 0.2em;
+        background-color: rgb(0, 0, 0);
+        margin: 0.3em 0;
+        transition: 0.4s;
+    }
+    /* FIM BARRA DE NAVEGAÇÃO */
+
+    /* SEÇÃO MAIN (onde reside o hero) */
+    main,
+    main div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    h1 {
+        font-size: 8vw;
+        text-align: center;
+    }
+
+    #hero {
+        display: flex;
+        order: -1;
+        justify-content: center;
+        margin-top: 1em;
+    }
+    #hero-svg {
+        width: 90%;
+    }
+
+    main button {
+        font-size: 1.2em;
+        border: none;
+        width: 7.5em;
+        height: 2.5em;
+        font-weight: 800;
+        font-family: Poppins;
+        border-radius: 50px;
+        background-color: green;
+        color: white;
+    }
+    main button:hover {
+        background-color: rgb(0, 199, 0);
+    }
+    /* FIM SEÇÃO MAIN */
+
+    /* SEÇÃO INPUT (form p/ encurtar link) */
+    #input-section {
+        display: flex;
+    }
+    #input-section div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        margin-top: 50px;
+        border-radius: 10px;
+        width: 90vw;
+        height: 120px;
+        background-image: url("/images/bg-shorten-desktop.svg");
+        background-color: rgb(28, 23, 56);
+    }
+
+    #input-section div input {
+        font-family: Poppins;
+        width: 70%;
+        height: 30%;
+        border: none;
+        border-radius: 5px;
+        font-weight: 400;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
+    #input-section div button {
+        /* REFAZER POIS TEM COISAS EM COMUM COM O OUTRO BUTTON */
+        font-size: 1.2em;
+        margin-top:0.5em;
+        border: none;
+        width: 70%;
+        height: 30%;
+        font-weight: 800;
+        font-family: Poppins;
+        border-radius: 5px;
+        padding-left: 1em;
+        padding-right: 1em;
+        background-color: green;
+        color: white;
+    }
 }
-
-.two {
-    margin-top: 50px;
-}
-
-.three {
-    margin-top: 80px;
-}
-
-.card p {
-    margin: auto;
-
-}
-
-.corner-pic {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    top: -60px;
-
-    background-color: rgb(28, 23, 56);
-    border-radius: 50px;
-    width: 80px;
-    height: 80px;
-    margin-bottom: 0px;
-}
-
-.corner-pic img {
-    width: 60%;
-    height: 60%;
-}
-
-#boost-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 200px;
-
-    background-color: rgb(28, 23, 56);
-    background-image: url("/images/bg-boost-desktop.svg");
-}
-
-#boost-section h2 {
-    color: white;
-}
-
-#boost-section button {
-    border: none;
-    width: 150px;
-    height: 3em;
-    font-weight: 400;
-    font-family: Poppins;
-    font-size: 1em;
-    border-radius: 50px;
-    background-color: green;
-    color: white;
-}
-
-footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: 220px;
-    background-color: rgb(17, 12, 17);
-    padding-top: 10px;
-    padding-left: 10px;
-    color: white;
-}
-
-footer #footer_resources {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-}
-
-footer #footer_logo {
-    margin-left: 4%;
-
-
-}
-
-footer ul {
-
-
-    font-weight: 200;
-    list-style-type: none;
-}
-
-footer ul li:first-child {
-    font-weight:700;
-}
-
-#footer_social {
-    margin-right: 4%;
-}
-
-i {
-    font-size: 1.8em;
-}
-
-.fab {
-    color: white;
-}
-
-i:hover {
-    cursor: pointer;
-    color: #92374d;
-    transition: all 0.2s ease-out;
-}
-
-
