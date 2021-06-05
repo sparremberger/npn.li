@@ -1,3 +1,11 @@
+:root {
+    --azulzinho: rgb(44, 183, 189);
+    --dark: rgb(35, 32, 39);
+    --hover: salmon;
+}
+
+
+
 body {
     background-color: white;
 }
@@ -26,7 +34,7 @@ body {
     #header-links {
         margin: 1vw;
         padding: 1vw;
-        background-color: white;
+        background-color: rgb(248, 248, 248);
         display: none;
         color: white;
         box-shadow: 2px 2px 4px grey;
@@ -100,7 +108,7 @@ body {
         width: 90%;
     }
 
-    main button {
+    button {
         font-size: 1.2em;
         border: none;
         width: 7.5em;
@@ -111,7 +119,7 @@ body {
         background-color: green;
         color: white;
     }
-    main button:hover {
+    button:hover {
         background-color: rgb(0, 199, 0);
     }
 
@@ -173,12 +181,13 @@ body {
         display: flex;
         flex-direction: column;
         text-align: center;
-        background-color:rgb(229, 229, 240);
-        position:relative;
-        top:-3.8em;  /* MAGIC NUMBER <<<<<<<<<<<<<< */
-        padding-top:3.8em;
+        background-color: rgb(229, 229, 240);
+        position: relative;
+        top: -3.8em; /* MAGIC NUMBER <<<<<<<<<<<<<< */
+        padding-top: 3.8em;
         z-index: -1;
-        
+        margin-bottom: -3.8em;
+        padding-bottom: 2em;
     }
 
     #features-section div {
@@ -190,15 +199,88 @@ body {
 
     .card {
         box-shadow: 2px 2px 4px grey;
-        border-radius:5px;
-        background-color:white;
-        margin-left:1em;
-        margin-right:1em;
+        border-radius: 5px;
+        background-color: white;
+        margin-left: 1em;
+        margin-right: 1em;
+        margin-bottom: 2.5em;
     }
 
     .corner-pic {
-        background-color:rgb(53, 2, 53);
-        padding:0.8em;
-        border-radius:50px;
+        background-color: rgb(53, 2, 53);
+        padding: 0.8em;
+        border-radius: 50px;
+        position: relative;
+        top: -3em;
     }
+
+    #box {
+        border: solid 4px var(--azulzinho);
+        height: 35em;
+        position: absolute;
+        z-index: -1;
+    }
+    h4 {
+        margin-top: -1.5em;
+    }
+    .card p {
+        margin-top: 0;
+    }
+
+    /* SEÇÃO "TURBINE" */
+    #boost-section {
+        text-align: center;
+        height: 200px;
+        color: white;
+        background-color: rgb(28, 23, 56);
+        background-image: url("/images/bg-boost-desktop.svg");
+    }
+
+    /* FOOTER */
+    footer {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        color: white;
+        background-color: var(--dark);
+        font-size: 0.9em;
+        line-height: 2em;
+    }
+
+    #footer_logo {
+        margin: 2em;
+        width: 8em;
+    }
+    footer ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    footer li {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    #footer_social a {
+        color: white;
+    }
+
+    i {
+        /* Seria estúpido usar shorthand aqui. Por que devs preferem shorthand? Prejudica a legibilidade do código. */
+        margin-top: 1em;
+        margin-left: 0.4em;
+        margin-right: 0.4em;
+        margin-bottom: 1em;
+        font-size: 1.8em;
+    }
+
+    i:hover {
+        color:var(--hover);
+    }
+
+
 }
