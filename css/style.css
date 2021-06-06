@@ -216,7 +216,7 @@ body {
 
     #box {
         border: solid 4px var(--azulzinho);
-        height: 35em;
+        height: 38em;
         position: absolute;
         z-index: -1;
     }
