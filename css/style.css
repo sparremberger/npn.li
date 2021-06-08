@@ -1,301 +1,295 @@
 :root {
     --azulzinho: rgb(44, 183, 189);
     --dark: rgb(35, 32, 39);
-    --purplezao : rgb(28, 23, 56);
+    --purplezao: rgb(28, 23, 56);
     --purplezinho: rgb(58, 51, 100);
     --hover: salmon;
 }
 
-
-
 body {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px;
     background-color: white;
+    width: 100vw;
+    overflow-x: hidden;
+    /*overflow-y: hidden; /* REMOVER, SÓ PRA DEBUG */
+    font-family: Poppins;
 }
 
-@media (max-width: 768px) {
-    body {
-        display: flex;
-        flex-direction: column;
-        margin: 0px;
-        padding: 0px;
-        background-color: white;
-        width: 100vw;
-        overflow-x: hidden;
-        /*overflow-y: hidden; /* REMOVER, SÓ PRA DEBUG */
-        font-family: Poppins;
-    }
+/* BARRA DE NAVEGAÇÃO */
+nav {
+    background-color: white;
 
-    /* BARRA DE NAVEGAÇÃO */
-    nav {
-        background-color: white;
+    display: flex;
+    justify-content: flex-start;
+}
 
-        display: flex;
-        justify-content: flex-start;
-    }
+#header-links {
+    margin: 1vw;
+    padding: 1vw;
+    background-color: var(--purplezinho);
+    display: none;
+    color: white;
+    border-radius: 25px;
+    text-align: center;
+    line-height: 2em;
+}
 
-    #header-links {
-        margin: 1vw;
-        padding: 1vw;
-        background-color: var(--purplezinho);
-        display: none;
-        color: white;
-        border-radius:25px;
-        text-align: center;
-        line-height:2em;
-    }
+#header-links ul {
+    margin-left: 10px;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
 
-    #header-links ul {
-        margin-left: 10px;
-        padding-left: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-    }
+#header-links hr {
+    width: 90%;
+    background-color: rgb(92, 92, 92);
+    height: 1px;
+    border: none;
+    margin-bottom: 1em;
+}
 
-    #header-links hr {
-        width:90%;
-        background-color:rgb(92, 92, 92);
-        height:1px;
-        border:none;
-        margin-bottom:1em;
-    }
+#header-links a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+#header-links a:hover {
+    color: salmon;
+}
 
-    
-    #header-links a {
-        color: rgb(255, 255, 255);
-        text-decoration: none;
-    }
-    #header-links a:hover {
-        color: salmon;
-    }
+#logo,
+#footer_logo {
+    /* Revisar */
+    width: 25vw;
+    margin-left: 0.5em;
+    margin-top: 0.5em;
+    padding: 0;
+}
 
-    #logo,
-    #footer_logo {
-        /* Revisar */
-        width: 25vw;
-        margin-left: 0.5em;
-        margin-top: 0.5em;
-        padding: 0;
-    }
+/* HAMBURGER */
+.container {
+    display: inline-block;
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    cursor: pointer;
+}
 
-    /* HAMBURGER */
-    .container {
-        display: inline-block;
-        position: absolute;
-        top: 0.5em;
-        right: 0.5em;
-        cursor: pointer;
-    }
+.bar1,
+.bar2,
+.bar3 {
+    width: 1.4em;
+    height: 0.2em;
+    background-color: rgb(0, 0, 0);
+    margin: 0.3em 0;
+    transition: 0.4s;
+}
+/* FIM BARRA DE NAVEGAÇÃO */
 
-    .bar1,
-    .bar2,
-    .bar3 {
-        width: 1.4em;
-        height: 0.2em;
-        background-color: rgb(0, 0, 0);
-        margin: 0.3em 0;
-        transition: 0.4s;
-    }
-    /* FIM BARRA DE NAVEGAÇÃO */
+/* SEÇÃO MAIN (onde reside o hero) */
+main,
+main div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
-    /* SEÇÃO MAIN (onde reside o hero) */
-    main,
-    main div {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
+h1 {
+    font-size: 8vw;
+    text-align: center;
+}
 
-    h1 {
-        font-size: 8vw;
-        text-align: center;
-    }
+#hero {
+    display: flex;
+    order: -1;
+    justify-content: center;
+    margin-top: 1em;
+}
+#hero-svg {
+    width: 90%;
+}
 
-    #hero {
-        display: flex;
-        order: -1;
-        justify-content: center;
-        margin-top: 1em;
-    }
-    #hero-svg {
-        width: 90%;
-    }
+button {
+    font-size: 1.2em;
+    border: none;
+    width: 7.5em;
+    height: 2.5em;
+    font-weight: 800;
+    font-family: Poppins;
+    border-radius: 50px;
+    background-color: green;
+    color: white;
+}
+button:hover {
+    background-color: rgb(0, 199, 0);
+}
 
-    button {
-        font-size: 1.2em;
-        border: none;
-        width: 7.5em;
-        height: 2.5em;
-        font-weight: 800;
-        font-family: Poppins;
-        border-radius: 50px;
-        background-color: green;
-        color: white;
-    }
-    button:hover {
-        background-color: rgb(0, 199, 0);
-    }
+p {
+    text-align: center;
+    margin: 2em;
+    margin-top: 0;
+    color: gray;
+}
+/* FIM SEÇÃO MAIN */
 
-    p {
-        text-align: center;
-        margin: 2em;
-        margin-top: 0;
-        color: gray;
-    }
-    /* FIM SEÇÃO MAIN */
+/* SEÇÃO INPUT (form p/ encurtar link) */
+#input-section {
+    display: flex;
+}
+#input-section div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 10px;
+    width: 90vw;
+    height: 120px;
+    background-image: url("/images/bg-shorten-desktop.svg");
+    background-color: rgb(28, 23, 56);
+}
 
-    /* SEÇÃO INPUT (form p/ encurtar link) */
-    #input-section {
-        display: flex;
-    }
-    #input-section div {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: auto;
-        margin-top: 50px;
-        border-radius: 10px;
-        width: 90vw;
-        height: 120px;
-        background-image: url("/images/bg-shorten-desktop.svg");
-        background-color: rgb(28, 23, 56);
-    }
+#input-section div input {
+    font-family: Poppins;
+    width: 70%;
+    height: 30%;
+    border: none;
+    border-radius: 5px;
+    font-weight: 400;
+    padding-left: 1em;
+    padding-right: 1em;
+}
 
-    #input-section div input {
-        font-family: Poppins;
-        width: 70%;
-        height: 30%;
-        border: none;
-        border-radius: 5px;
-        font-weight: 400;
-        padding-left: 1em;
-        padding-right: 1em;
-    }
+#input-section div button {
+    /* REFAZER POIS TEM COISAS EM COMUM COM O OUTRO BUTTON */
+    font-size: 1.2em;
+    margin-top: 0.8em;
+    border: none;
+    width: 70%;
+    height: 30%;
+    font-weight: 800;
+    font-family: Poppins;
+    border-radius: 5px;
+    padding-left: 1em;
+    padding-right: 1em;
+    background-color: green;
+    color: white;
+}
 
-    #input-section div button {
-        /* REFAZER POIS TEM COISAS EM COMUM COM O OUTRO BUTTON */
-        font-size: 1.2em;
-        margin-top: 0.8em;
-        border: none;
-        width: 70%;
-        height: 30%;
-        font-weight: 800;
-        font-family: Poppins;
-        border-radius: 5px;
-        padding-left: 1em;
-        padding-right: 1em;
-        background-color: green;
-        color: white;
-    }
+/* FEATURES SECTION, basicamente só divs com p dentro. */
+#features-section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgb(229, 229, 240);
+    position: relative;
+    top: -3.8em; /* MAGIC NUMBER <<<<<<<<<<<<<< */
+    padding-top: 3.8em;
+    z-index: -1;
+    margin-bottom: -3.8em;
+    padding-bottom: 2em;
+}
 
+#features-section div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em; /* VERIFICAR MARGEM DE TODAS AS DIVS EM MOBILE. PODE SER UMA SÓ VARIÁVEL. */
+}
 
-    /* FEATURES SECTION, basicamente só divs com p dentro. */
-    #features-section {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        background-color: rgb(229, 229, 240);
-        position: relative;
-        top: -3.8em; /* MAGIC NUMBER <<<<<<<<<<<<<< */
-        padding-top: 3.8em;
-        z-index: -1;
-        margin-bottom: -3.8em;
-        padding-bottom: 2em;
-    }
+.card {
+    box-shadow: 2px 2px 4px grey;
+    border-radius: 5px;
+    background-color: white;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 2.5em;
+}
 
-    #features-section div {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 1em; /* VERIFICAR MARGEM DE TODAS AS DIVS EM MOBILE. PODE SER UMA SÓ VARIÁVEL. */
-    }
+.corner-pic {
+    background-color: rgb(53, 2, 53);
+    padding: 0.8em;
+    border-radius: 50px;
+    position: relative;
+    top: -3em;
+}
 
-    .card {
-        box-shadow: 2px 2px 4px grey;
-        border-radius: 5px;
-        background-color: white;
-        margin-left: 1em;
-        margin-right: 1em;
-        margin-bottom: 2.5em;
-    }
+#box {
+    border: solid 4px var(--azulzinho);
+    height: 38em; /* mais um número mágico */
+    position: absolute;
+    z-index: -1;
+}
+h4 {
+    margin-top: -1.5em;
+}
+.card p {
+    margin-top: 0;
+}
 
-    .corner-pic {
-        background-color: rgb(53, 2, 53);
-        padding: 0.8em;
-        border-radius: 50px;
-        position: relative;
-        top: -3em;
-    }
+/* SEÇÃO "TURBINE" */
+#boost-section {
+    text-align: center;
+    height: 200px;
+    color: white;
+    background-color: rgb(28, 23, 56);
+    background-image: url("/images/bg-boost-desktop.svg");
+}
 
-    #box {
-        border: solid 4px var(--azulzinho);
-        height: 38em; /* mais um número mágico */
-        position: absolute;
-        z-index: -1;
-    }
-    h4 {
-        margin-top: -1.5em;
-    }
-    .card p {
-        margin-top: 0;
-    }
+/* FOOTER */
+footer {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background-color: var(--dark);
+    font-size: 0.9em;
+    line-height: 2em;
+}
 
-    /* SEÇÃO "TURBINE" */
-    #boost-section {
-        text-align: center;
-        height: 200px;
-        color: white;
-        background-color: rgb(28, 23, 56);
-        background-image: url("/images/bg-boost-desktop.svg");
-    }
+#footer_logo {
+    margin: 2em;
+    width: 8em;
+}
+footer ul {
+    margin: 0;
+    padding: 0;
+}
 
-    /* FOOTER */
-    footer {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        color: white;
-        background-color: var(--dark);
-        font-size: 0.9em;
-        line-height: 2em;
-    }
+footer li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
 
-    #footer_logo {
-        margin: 2em;
-        width: 8em;
-    }
-    footer ul {
-        margin: 0;
-        padding: 0;
-    }
+#footer_social a {
+    color: white;
+}
 
-    footer li {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-    }
+i {
+    /* Seria estúpido usar shorthand aqui. Por que devs preferem shorthand? Prejudica a legibilidade do código. */
+    margin-top: 1em;
+    margin-left: 0.4em;
+    margin-right: 0.4em;
+    margin-bottom: 1em;
+    font-size: 1.8em;
+}
 
-    #footer_social a {
-        color: white;
-    }
+i:hover {
+    color: var(--hover);
+}
 
-    i {
-        /* Seria estúpido usar shorthand aqui. Por que devs preferem shorthand? Prejudica a legibilidade do código. */
-        margin-top: 1em;
-        margin-left: 0.4em;
-        margin-right: 0.4em;
-        margin-bottom: 1em;
-        font-size: 1.8em;
-    }
-
-    i:hover {
-        color:var(--hover);
-    }
-
-
+@media (min-width: 768px) {
+       body {
+           background-color: black;
+       }
 }
