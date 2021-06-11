@@ -5,58 +5,55 @@
     --purplezinho: rgb(58, 51, 100);
     --hover: salmon;
 }
+@media (min-width: 768px) {
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        font-family: Poppins;
+    }
+    body > * {
+        margin-right:4em;
+        margin-left:4em;
+    }
+    /* BARRA DE NAVEGAÇÃO */
+    header {
+        display: flex;
+        flex-direction: row;
+        border:2px solid black;
+        margin-left:4em;
+        margin-right:4em;
+    }
 
-body {
-    margin:0;
-    padding:0;
-    width:100vw;
-    font-family: Poppins;
-}
+    #logo {
+        margin-top: 20px;
+        width: 100px;
+    }
 
-/* BARRA DE NAVEGAÇÃO */
-header {
-    display:flex;
-    flex-direction: row;
-    border:1px dotted pink;
-}
-
-nav {
-    display:flex;
-    border:1px solid red;
-}
-
-#logo {
-    margin-top:20px;
-    margin-left:20px;
-    width:100px;
-    height:min-content;
-}
-
-#header-links {
-    display:flex;
-    flex-direction:row;
-    width:100%;
-
-    border:1px solid blue;
-}
-
-#header-links ul {
+    #header-links {
+        display: flex;
+        flex-direction: row !important;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top:1%;
+        margin-left:2em;
+        margin-right:2em;
+        width: 100vw;
+    }
+    #header-links > a {
+        margin-right: 1em;
+    }
+    #header-links > a:nth-child(4) {
+        margin-left:auto;
+    } 
+    /* FIM DA BARRA DE NAVEGAÇÃO */
     
-}
+    /* SEÇÃO MAIN (onde reside o hero) */
+    main {
 
-#header-links > ul:nth-child(1) {
-    border:1px solid green;
-    width:100px;
-}
-#header-links > ul:nth-child(2) {
-    border:1px solid yellow;
-    width:100px;
-}
+    }
 
-hr {
-    border:none;
 }
-
 
 @media (max-width: 767px) {
     body {
@@ -72,6 +69,9 @@ hr {
     }
 
     /* BARRA DE NAVEGAÇÃO */
+    header {
+        border:1px solid red;
+    }
     nav {
         background-color: white;
 
@@ -80,6 +80,8 @@ hr {
     }
 
     #header-links {
+        display: flex;
+        flex-direction: column;
         margin: 1vw;
         padding: 1vw;
         background-color: var(--purplezinho);
@@ -88,22 +90,6 @@ hr {
         border-radius: 25px;
         text-align: center;
         line-height: 2em;
-    }
-
-    #header-links ul {
-        margin-left: 10px;
-        padding-left: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-    }
-
-    #header-links hr {
-        width: 90%;
-        background-color: rgb(92, 92, 92);
-        height: 1px;
-        border: none;
-        margin-bottom: 1em;
     }
 
     #header-links a {
@@ -342,12 +328,4 @@ hr {
     }
 }
 
-@media (min-width: 768px) {
-    body {
 
-    }
-
-    #header-links {
-        display: inline-block;
-    }
-}
