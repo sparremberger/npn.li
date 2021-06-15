@@ -5,29 +5,27 @@
     --purplezinho: rgb(58, 51, 100);
     --hover: salmon;
 }
+
 @media (min-width: 768px) {
     body {
         margin: 0;
         padding: 0;
-        width: 100vw;
+        width: 100%;
         font-family: Poppins;
+
     }
-    body > * {
-        margin-right:4em;
-        margin-left:4em;
-    }
+
     /* BARRA DE NAVEGAÇÃO */
     header {
         display: flex;
         flex-direction: row;
-        border:2px solid black;
-        margin-left:4em;
-        margin-right:4em;
     }
 
     #logo {
         margin-top: 20px;
         width: 100px;
+
+        margin-left: 6em;
     }
 
     #header-links {
@@ -35,24 +33,260 @@
         flex-direction: row !important;
         justify-content: flex-start;
         align-items: center;
-        margin-top:1%;
-        margin-left:2em;
-        margin-right:2em;
+        margin-top: 1%;
+        margin-left: 2em;
+        margin-right: 2em;
         width: 100vw;
     }
     #header-links > a {
         margin-right: 1em;
+        color: gray;
+        text-decoration: none;
+    }
+    #header-links a:hover {
+        color: salmon;
     }
     #header-links > a:nth-child(4) {
-        margin-left:auto;
-    } 
-    /* FIM DA BARRA DE NAVEGAÇÃO */
-    
-    /* SEÇÃO MAIN (onde reside o hero) */
-    main {
-
+        margin-left: auto;
     }
 
+    /* FIM DA BARRA DE NAVEGAÇÃO */
+
+    /* SEÇÃO MAIN (onde reside o hero) */
+    main {
+        display: flex;
+        margin-top: 3em;
+        margin-right: 6em;
+        margin-left: 6em;
+    }
+
+    main > div {
+    }
+    main > div:nth-child(1) {
+        display: flex;
+        flex-direction: column;
+    }
+    #hero-svg {
+        width: 40vw;
+    }
+    h1 {
+        font-size: 3em;
+        line-height: 1.2em;
+        margin-bottom: 0;
+    }
+    p {
+        margin-top: 0.5em;
+        margin-bottom: 2em;
+        color: gray;
+    }
+    button {
+        margin-top: 1em;
+        font-size: 1.2em;
+        border: none;
+        width: 7.5em;
+        height: 2.5em;
+        font-weight: 800;
+        font-family: Poppins;
+        border-radius: 50px;
+        background-color: green;
+        color: white;
+    }
+    button:hover {
+        background-color: rgb(0, 199, 0);
+    }
+    /* FIM DA SEÇÃO MAIN */
+
+    /* INPUT SECTION  */
+    #input-section {
+        display: flex;
+    }
+    #input-section div {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        margin-top: 50px;
+        border-radius: 10px;
+        margin-left: 6em;
+        margin-right: 6em; /* REFATORAR porque se mudar um já sabe né? */
+        width: 100vw;
+        height: 120px;
+        background-image: url("/images/bg-shorten-desktop.svg");
+        background-color: rgb(28, 23, 56);
+    }
+
+    #input-section div input {
+        font-family: Poppins;
+        width: 70%;
+        height: 30%;
+        border: none;
+        border-radius: 5px;
+        font-weight: 400;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
+    #input-section div button {
+        /* REFAZER POIS TEM COISAS EM COMUM COM O OUTRO BUTTON */
+        margin-top: 0;
+        margin-left: 1em;
+        border-radius: 5px;
+    }
+    /* FIM DA INPUT SECTION */
+
+    /* FEATURES SECTION, basicamente só divs com p dentro. */
+    #features-section {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background-color: rgb(229, 229, 240);
+        position: relative;
+        top: -3.8em; /* MAGIC NUMBER <<<<<<<<<<<<<< */
+        padding-top: 3.8em;
+
+        z-index: -1;
+        margin-bottom: -3.8em;
+        padding-bottom: 6em;
+    }
+
+    #features-text-div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1em; /* VERIFICAR MARGEM DE TODAS AS DIVS EM MOBILE. PODE SER UMA SÓ VARIÁVEL. */
+    }
+
+    #cards-div {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .card {
+        border-radius: 5px;
+        background-color: white;
+        margin-left: 1em;
+        margin-right: 1em;
+        margin-bottom: 2.5em;
+        width: 25%;
+    }
+    .card h4 {
+        text-align: left;
+        margin: 1.5em;
+        margin-top: -1.5em;
+        margin-bottom: 1em;
+    }
+
+    .card p {
+        text-align: left;
+        margin: 1.5em;
+    }
+    .card.two {
+        position: relative;
+        top: 3em;
+    }
+    .card.three {
+        position: relative;
+        top: 6em;
+    }
+    .corner-pic {
+        background-color: rgb(53, 2, 53);
+        padding: 0.8em;
+        width: 3em;
+        height: 2.8em;
+        border-radius: 50px;
+        position: relative;
+        top: -2em;
+        left: 2em;
+    }
+
+    /*#box {
+        border: solid 4px var(--azulzinho);
+        height: 38em; /* mais um número mágico 
+        position: absolute;
+        z-index: -1;
+    }*/
+    h4 {
+        margin-top: -1.5em;
+    }
+    .card p {
+        margin-top: 0;
+    }
+    /* FIM DA FEATURES SECTION */
+
+    /* SEÇÃO TURBINE */
+
+    #boost-section {
+        position: relative;
+        top: -1.2em;
+        text-align: center;
+        height: 200px;
+        color: white;
+        background-color: rgb(28, 23, 56);
+        background-image: url("/images/bg-boost-desktop.svg");
+    }
+    h2 {
+        padding-top: 1em;
+    }
+    #boost-section > button:nth-child(2) {
+        margin: 0;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-top:-1.2em;
+
+
+        height: 220px;
+        background-color: var(--dark);
+        padding-top: 10px;
+        padding-left: 10px;
+        margin-bottom:-2em;
+        padding-bottom:-2em;
+        color: white;
+    }
+
+    footer #footer_resources {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    footer #footer_logo {
+        margin-left: 4%;
+    }
+
+    footer ul {
+        font-weight: 200;
+        list-style-type: none;
+    }
+
+    footer ul li:first-child {
+        font-weight: 700;
+    }
+
+    #footer_social {
+        margin-right: 4%;
+    }
+
+    i {
+        font-size: 1.8em;
+    }
+
+    .fab {
+        color: white;
+    }
+
+    i:hover {
+        cursor: pointer;
+        color: #92374d;
+        transition: all 0.2s ease-out;
+    }
 }
 
 @media (max-width: 767px) {
@@ -62,7 +296,7 @@
         margin: 0px;
         padding: 0px;
         background-color: white;
-        width: 100vw;
+        width: 100%;
         overflow-x: hidden;
         /*overflow-y: hidden; /* REMOVER, SÓ PRA DEBUG */
         font-family: Poppins;
@@ -70,7 +304,6 @@
 
     /* BARRA DE NAVEGAÇÃO */
     header {
-        border:1px solid red;
     }
     nav {
         background-color: white;
@@ -243,12 +476,11 @@
     }
 
     .card {
-        box-shadow: 2px 2px 4px grey;
         border-radius: 5px;
         background-color: white;
-        margin-left: 1em;
+        margin-left: 2em;
         margin-right: 1em;
-        margin-bottom: 2.5em;
+        margin-bottom: 1em;
     }
 
     .corner-pic {
@@ -293,6 +525,8 @@
         background-color: var(--dark);
         font-size: 0.9em;
         line-height: 2em;
+        padding-bottom:-2em;
+        margin-bottom:-2em;
     }
 
     #footer_logo {
@@ -326,6 +560,5 @@
     i:hover {
         color: var(--hover);
     }
+
 }
-
-
