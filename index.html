@@ -17,7 +17,7 @@
         <header>
             <nav>
                 <img src="./images/logo.svg" id="logo" alt="npn.li logo" />
-                <div class="container" onclick="showLinks(this)">
+                <div class="container" onclick="hamburgerMenu(this)">
                     <div class="bar1"></div>
                     <div class="bar2"></div>
                     <div class="bar3"></div>
@@ -43,11 +43,12 @@
             </div>
         </main>
         <section id="input-section">
-            <div>
+            <div id="caixinha">
                 <label for="url"></label>
                 <input type="text" id="url" placeholder="Encurte um link aqui..." name="url" />
                 <button onclick="encurtar()">Encurtar</button>
             </div>
+            <div id="resposta"></div>
         </section>
         <section id="features-section">
             <div id="features-text-div">

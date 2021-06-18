@@ -99,10 +99,14 @@
     /* INPUT SECTION  */
     #input-section {
         display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
-    #input-section div {
+    #input-section #caixinha {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         margin: auto;
@@ -110,13 +114,24 @@
         border-radius: 10px;
         margin-left: 6em;
         margin-right: 6em; /* REFATORAR porque se mudar um já sabe né? */
-        width: 100vw;
+        width: 85vw;
         height: 120px;
+        
         background-image: url("/images/bg-shorten-desktop.svg");
         background-color: rgb(28, 23, 56);
     }
 
-    #input-section div input {
+    #resposta {
+        flex-basis: 100%;
+        border:1px solid rgb(124, 124, 124);
+        background-color:white;
+        border-radius:15px;
+        width:80vw;
+        padding-left:2em;
+
+    }
+
+    #input-section #caixinha input {
         font-family: Poppins;
         width: 70%;
         height: 30%;
@@ -127,7 +142,7 @@
         padding-right: 1em;
     }
 
-    #input-section div button {
+    #input-section #caixinha button {
         /* REFAZER POIS TEM COISAS EM COMUM COM O OUTRO BUTTON */
         margin-top: 0;
         margin-left: 1em;
@@ -412,8 +427,9 @@
     /* SEÇÃO INPUT (form p/ encurtar link) */
     #input-section {
         display: flex;
+        flex-direction: column;
     }
-    #input-section div {
+    #input-section #caixinha {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -427,7 +443,7 @@
         background-color: rgb(28, 23, 56);
     }
 
-    #input-section div input {
+    #input-section #caixinha input {
         font-family: Poppins;
         width: 70%;
         height: 30%;
@@ -438,7 +454,7 @@
         padding-right: 1em;
     }
 
-    #input-section div button {
+    #input-section #caixinha button {
         /* REFAZER POIS TEM COISAS EM COMUM COM O OUTRO BUTTON */
         font-size: 1.2em;
         margin-top: 0.8em;

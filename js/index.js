@@ -4,11 +4,22 @@ function encurtar() {
         .post("/encurtar", {
             url: `${url.value}`,
         })
-        .then((res) => console.log(res))
+        .then((res) => showLink(res))
         .catch((err) => console.error(err));
 }
 
-function showLinks() {
+function showLink(res) {
+    console.log(res.data.url);
+    console.log(res.data.link);
+    element = document.querySelector("#resposta");
+    element.innerHTML += `<div>Site original: ${res.data.url}
+     - Link curto: ${res.data.link}
+    <div>`;
+
+
+}
+
+function hamburgerMenu() {
     const x = document.querySelector("#header-links");
 
     if (x.style.display === "flex") {
