@@ -25,7 +25,7 @@ function isUserLoggedIn() {
         .get("/autenticar")
         .then((res) => {
             console.log(res.data);
-            if (res.data == "autenticado") {
+            if (res.data != "nope") {
                 autenticado = true;
                 document.querySelector("#header-links > a:nth-child(4)").outerHTML = `<a href="/minhaconta">Minha conta</a>`;
                 document.querySelector("#header-links > a:nth-child(5)").innerHTML = "";

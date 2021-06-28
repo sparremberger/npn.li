@@ -4,18 +4,45 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700&display=swap" rel="stylesheet" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="./css/minhaconta.css" />
         <title>Document</title>
     </head>
     <body>
-        <div>
-            <p>Congratulations. You're logged in.</p>
-            <div id="links">
-                <ul>
+        <header>
+            <nav>
+                <img src="./images/logo.svg" id="logo" alt="npn.li logo" onclick="home()" />
+                <div class="container" onclick="hamburgerMenu(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </nav>
+            <div id="header-links">
+                <a href="#">Sobre</a>
+                <a href="#">Funcionalidades</a>
+                <a href="#">Recursos</a>
 
-                </ul>
+                <a onclick="sair()" href="/">Sair</a>
+            </div>
+        </header>
+        <div></div>
+        <div class="dashboard">
+            <h4>Bem vindo,</h4>
+            <div class="not-title">
+                <nav>
+                    <ul>
+                        <li>Meu perfil</li>
+                        <li>Links</li>
+                    </ul>
+                </nav>
+                <div id="links">
+                    <ul></ul>
+                </div>
             </div>
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
-        <script src='./js/myacc.js'></script>
+        <script src="./js/myacc.js"></script>
     </body>
 </html>

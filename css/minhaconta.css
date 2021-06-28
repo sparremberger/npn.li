@@ -1,0 +1,112 @@
+:root {
+    --azulzinho: rgb(44, 183, 189);
+    --dark: rgb(35, 32, 39);
+    --purplezao: rgb(28, 23, 56);
+    --purplezinho: rgb(58, 51, 100);
+    --hover: salmon;
+    --escurinho: rgb(229, 229, 240);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: Poppins;
+    background-color: var(--escurinho)
+}
+.not-title {
+    /* Enjambração intensa */
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 0px;
+    padding-top: 0px;
+    height: 100%;
+    flex-wrap: wrap;
+    background-color:white;
+}
+
+#links {
+    flex-basis:79%;
+
+}
+
+#links ul {
+    list-style: none;
+    
+}
+.dashboard {
+
+    border-radius: 10px;
+    margin: auto;
+    height: 50vh;
+    width: 70vw;
+    overflow: hidden; /* O overflow hidden no container faz com que a borda do h4 não vaze */
+    padding: 0;
+    box-shadow: 5px 5px 5px -5px gray;
+}
+
+.not-title nav {
+    width: 0%;
+    flex-basis:20%;
+    background-color:var(--purplezinho);
+}
+
+.not-title nav > ul {
+    margin:0;
+    padding:0;
+    
+    line-height: 3em;
+    color:white;
+    text-align: center;
+    list-style-position: outside;
+    list-style-type: none;
+}
+
+li {
+    box-shadow: 0px 3px 2px -2px white;
+}
+
+h4 {
+    margin-top: 0;
+    padding-left: 1em;
+    margin-bottom: 0;
+    border-bottom: 1px solid black;
+    color: white;
+    background-color: black;
+}
+
+/* BARRA DE NAVEGAÇÃO */
+header {
+    display: flex;
+    flex-direction: row;
+}
+
+#logo {
+    margin-top: 20px;
+    width: 100px;
+
+    margin-left: 6em;
+}
+
+#header-links {
+    display: flex;
+    flex-direction: row !important;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 1%;
+    margin-left: 2em;
+    margin-right: 2em;
+    width: 100vw;
+}
+#header-links > a {
+    margin-right: 1em;
+    color: gray;
+    text-decoration: none;
+}
+#header-links a:hover {
+    color: salmon;
+}
+#header-links > a:nth-child(4) {
+    margin-left: auto;
+}

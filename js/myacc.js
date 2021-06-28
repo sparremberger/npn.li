@@ -1,25 +1,54 @@
 let links = [];
+let username = "q";
 
 function getLinks() {
     axios
         .get("/userlinks")
-        .then(res => { console.log( res.data[0]);
-                        links = res.data;
-                        showData();
+        .then((res) => {
+            links = res.data;
+            showData();
         })
         .catch((err) => console.error(err));
-    //console.log(links[0]);
+
+}
+
+function getUsername() {
+    axios
+    .get("/autenticar")
+    .then((res) => {
+        username = res.data;
+        console.log(username);
+        updateName();
+        
+    })
+    .catch((err) => console.error(err));
+
 }
 
 function showData() {
     table = document.querySelector("#links > ul");
-    table.innerHTML = '';
-    console.log(links[0].link)
+    table.innerHTML = "";
     for (let i = 0; i < links.length; i++) {
-    table.innerHTML +=`<li>Destino: ${links[i].url} Link: ${links[i].link}</li>`;
+        table.innerHTML += `<li>Link: <a href="http://npn.li/${links[i].link}"npn.li/${links[i].link}>  Destino: ${links[i].url} </li>`;
     }
-    
 }
 
-getLinks();
+function updateName() {
+    document.querySelector("body > div.dashboard > h4").innerHTML = `Bem vindo, ${username}`;
+}
 
+function home() {
+    document.location.href="/";
+}
+
+function sair() {
+    console.log("saiu");
+    document.cookie = "access_token=kek";
+}
+
+function init() {
+    getUsername();
+    getLinks();
+}
+
+init();

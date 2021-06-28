@@ -4,6 +4,7 @@
     --purplezao: rgb(28, 23, 56);
     --purplezinho: rgb(58, 51, 100);
     --hover: salmon;
+    --escurinho: rgb(229, 229, 240);
 }
 
 @media (min-width: 768px) {
@@ -155,7 +156,7 @@
         display: flex;
         flex-direction: column;
         text-align: center;
-        background-color: rgb(229, 229, 240);
+        background-color: var(--escurinho);
         position: relative;
         top: -3.8em; /* MAGIC NUMBER <<<<<<<<<<<<<< */
         padding-top: 3.8em;
