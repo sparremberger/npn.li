@@ -17,24 +17,19 @@ function showLink(res) {
     element.innerHTML += `<div>Site original: ${res.data.url}
      - Link curto: ${res.data.link}
     <div>`;
-
-
 }
-
-
 
 function isUserLoggedIn() {
     let autenticado = false;
     axios
         .get("/autenticar")
-        .then(res => { console.log( res.data);
-                if (res.data == "autenticado") {
-                    autenticado = true;
-                    document.querySelector("#header-links > a:nth-child(4)").outerHTML = `<a href="/minhaconta">Minha conta</a>`;
-                    document.querySelector("#header-links > a:nth-child(5)").innerHTML = '';
-                }
-                        
-                        
+        .then((res) => {
+            console.log(res.data);
+            if (res.data == "autenticado") {
+                autenticado = true;
+                document.querySelector("#header-links > a:nth-child(4)").outerHTML = `<a href="/minhaconta">Minha conta</a>`;
+                document.querySelector("#header-links > a:nth-child(5)").innerHTML = "";
+            }
         })
         .catch((err) => console.error(err));
 }
