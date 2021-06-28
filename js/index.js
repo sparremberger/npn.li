@@ -1,3 +1,5 @@
+let autenticado = false;
+
 function encurtar() {
     const url = document.querySelector("#url");
     axios
@@ -19,6 +21,24 @@ function showLink(res) {
 
 }
 
+
+
+function isUserLoggedIn() {
+    let autenticado = false;
+    axios
+        .get("/autenticar")
+        .then(res => { console.log( res.data);
+                if (res.data == "autenticado") {
+                    autenticado = true;
+                    document.querySelector("#header-links > a:nth-child(4)").outerHTML = `<a href="/minhaconta">Minha conta</a>`;
+                    document.querySelector("#header-links > a:nth-child(5)").innerHTML = '';
+                }
+                        
+                        
+        })
+        .catch((err) => console.error(err));
+}
+
 function hamburgerMenu() {
     const x = document.querySelector("#header-links");
 
@@ -30,3 +50,5 @@ function hamburgerMenu() {
         console.log("blocou");
     }
 }
+
+isUserLoggedIn();
