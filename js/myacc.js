@@ -29,7 +29,7 @@ function showData() {
     table = document.querySelector("#links > ul");
     table.innerHTML = "";
     for (let i = 0; i < links.length; i++) {
-        table.innerHTML += `<li>Link: <a href="http://npn.li/${links[i].link}"npn.li/${links[i].link}>  Destino: ${links[i].url} </li>`;
+        table.innerHTML += `<li><a href="http://npn.li/${links[i].link}">npn.li/${links[i].link}</a>  ${links[i].url} </li>`;
     }
 }
 

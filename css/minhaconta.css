@@ -36,9 +36,9 @@ body {
     
 }
 .dashboard {
-
     border-radius: 10px;
     margin: auto;
+    margin-top:5%;
     height: 50vh;
     width: 70vw;
     overflow: hidden; /* O overflow hidden no container faz com que a borda do h4 não vaze */

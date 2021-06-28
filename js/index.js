@@ -2,12 +2,14 @@ let autenticado = false;
 
 function encurtar() {
     const url = document.querySelector("#url");
-    axios
-        .post("/encurtar", {
-            url: `${url.value}`,
-        })
-        .then((res) => showLink(res))
-        .catch((err) => console.error(err));
+
+        axios
+            .post("/encurtar", {
+                url: `${url.value}`,
+            })
+            .then((res) => showLink(res))
+            .catch((err) => console.error(err));
+
 }
 
 function showLink(res) {
